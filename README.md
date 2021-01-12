@@ -1,9 +1,9 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Hydrafacial AWS IOT"></a>
 </p>
 
-<h3 align="center">Project Title</h3>
+<h3 align="center">Hydrafacial AWS IOT Infrastructure</h3>
 
 <div align="center">
 
@@ -16,8 +16,10 @@
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> 
     <br> 
+
+    HydraFacial is connecting the data from its facial treatment systems to the AWS cloud.
 </p>
 
 ## 📝 Table of Contents
@@ -34,7 +36,11 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This project will develop the IoT cloud connection and required infrastructure for AWS IOT services.
+
+Collected data from IOT devices will then be utilized to support key metrics and use cases for its business, providers, and end users.
+
+
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -45,37 +51,20 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them.
 
 ```
-Give examples
+Node Package Manager NPM
+AWS Credentials
+@onica/Runway
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+A step by step series that tell you how to get a development env running.
 
-Say what the step will be
-
-npm install -D @onica/runway
-
-
-npx runway deploy --debug -e stage  >>>>>> -e means --deploy-environment and it must be specified as optoin or as environment variable
-
-npx runway stage --debug -e stage
-
-npx runway gen-sample cfn
-
-runway.variables.yml
+Installing Runway can be offered with different options but here it will be available as dev dependency in the package.json , so you will just need to run this command:
 
 ```
-Give the example
+npm install
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
@@ -103,20 +92,27 @@ Add notes about how to use the system.
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-Add additional notes about how to deploy this on a live system.
+This project use runway to manage deployment of Cloudformation stacks on different environments as follows:
 
+```
+npx runway deploy --debug --deploy-environment dev
+
+npx runway deploy --debug --deploy-environment stage
+```
+
+And for generating sample Cloudformation module :
+```
+npx runway gen-sample cfn
+```
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [Runway](https://docs.onica.com/projects/runway/en/release/index.html) - IAC Deployment Tool
+- [NPM](https://docs.npmjs.com/about-npm) - Node Package Manager
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@Rackspace](https://www.rackspace.com/) - Architecture & Implementation
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
