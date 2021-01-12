@@ -18,7 +18,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo runway plan output
-      - npx runway plan -e dev --debug
+      - npx runway plan --ci --debug -e dev 
   post_build:
     commands:
       - echo Build completed on `date`
