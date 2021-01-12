@@ -11,10 +11,9 @@ phases:
       - npm i -D @onica/runway
   pre_build:
     commands:
-      # - echo Installing source NPM dependencies...
+      - echo Installing source NPM dependencies...
       # - npm install
       # - npm install unit.js
-      - ping google.com
   build:
     commands:
       - echo Build started on `date`
