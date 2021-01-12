@@ -5,15 +5,16 @@ phases:
   install:
     runtime-versions:
       nodejs: 10  
-      python: 3.7
+      python: 3.8
     commands:
       - echo Installing runway...
       - npm i -D @onica/runway
-  # pre_build:
-  #   commands:
-  #     - echo Installing source NPM dependencies...
-  #     - npm install
-  #     - npm install unit.js
+  pre_build:
+    commands:
+      # - echo Installing source NPM dependencies...
+      # - npm install
+      # - npm install unit.js
+      - ping google.com
   build:
     commands:
       - echo Build started on `date`
