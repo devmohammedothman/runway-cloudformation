@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation Sample Stack that create S3 Bucket
+Outputs:
+  CFNSampleBucketArn:
+    Description: Arn of bucket
+    Value: !GetAtt 'CFNSampleBucket.Arn'
+  CFNSampleBucketName:
+    Description: Name of bucket
+    Value: !Ref 'CFNSampleBucket'
+Parameters:
+  BucketName:
+    Type: String
+    Description: Name for the S3 bucket
+  
+Resources:
+  CFNSampleBucket:
+    DeletionPolicy: Delete
+    Properties:
+      AccessControl: Private
+      BucketName: !Ref 'BucketName'
+      LifecycleConfiguration:
+        Rules:
+          - NoncurrentVersionExpirationInDays: 90
+            Status: Enabled
+      VersioningConfiguration:
+        Status: Enabled
+    Type: AWS::S3::Bucket
+  

@@ -1,0 +1,7 @@
+{ "name": "runway-cloudformation-tutorial",
+    "description": "Sample Tutorial about using Runway with Cloudformation",
+    "version": "0.0.1",
+    "devDependencies": {
+      "@onica/runway": "1.16.3"
+    }
+  }

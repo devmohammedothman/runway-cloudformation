@@ -1,0 +1,13 @@
+---
+# Full syntax at https://github.com/onicagroup/runway
+ignore_git_branch: true
+deployments:
+  - name: sample-cloudformation-module
+    environments:
+      dev: us-east-1
+      stage: us-west-2
+    modules:
+      - path: sampleapp.cfn
+    regions:
+      - us-east-1
+      - us-west-2

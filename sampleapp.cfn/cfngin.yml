@@ -1,0 +1,11 @@
+namespace: ${namespace}
+cfngin_bucket: ${cfngin_bucket_name}
+
+sys_path: ./
+
+stacks:
+  cfn-sample-stack:
+    template_path: templates/cfn_sample_stack.yml  # also supports json templates
+    stack_name: cfn-sample-stack
+    variables: # will be injected from environment file
+      BucketName: ${bucket_name}
