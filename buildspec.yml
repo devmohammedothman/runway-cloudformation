@@ -5,19 +5,19 @@ phases:
   install:
     runtime-versions:
       nodejs: 10  
-    # commands:
-    #   - echo Installing runway...
-    #   - npm install
-  pre_build:
     commands:
-      - echo Installing source NPM dependencies...
-      - npm install
-      # - npm install unit.js
+      - echo Installing runway...
+      - npm i -D @onica/runway
+  # pre_build:
+  #   commands:
+  #     - echo Installing source NPM dependencies...
+  #     - npm install
+  #     - npm install unit.js
   build:
     commands:
       - echo Build started on `date`
       - echo runway plan output
-      - runway --version
+      - npx runway --version
   post_build:
     commands:
       - echo Build completed on `date`
