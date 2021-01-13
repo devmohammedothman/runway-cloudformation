@@ -6,19 +6,19 @@ phases:
     runtime-versions:
       nodejs: 12  
       python: 3.8
-    # commands:
-    #   - echo Installing runway...
+    commands:
+      - echo Downloading runway...
+      - curl -L https://oni.ca/runway/1.16.0/linux -o runway
     #   - npm i -D @onica/runway
   pre_build:
     commands:
-      - echo Installing source NPM dependencies...
-      - npm install
-      # - npm install unit.js
+      - ls -a
+      - chmod +x runway
   build:
     commands:
       - echo Build started on `date`
       - echo runway plan output
-      - npx runway plan --ci -e dev 
+      - ./runway plan --ci -e dev 
   post_build:
     commands:
       - echo Build completed on `date`
